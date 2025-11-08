@@ -1,0 +1,17 @@
+#include <stdio.h>
+int main() {
+    int m[3][3], *p = &m[0][0], i, max, min;
+
+    printf("Enter 9 elements:\n");
+    for(i=0; i<9; i++)
+        scanf("%d", p + i);
+
+    max = min = *p;
+
+    for(i=0; i<9; i++) {
+        if(*(p + i) > max) max = *(p + i);
+        if(*(p + i) < min) min = *(p + i);
+    }
+
+    printf("Max = %d\nMin = %d", max, min);
+}
