@@ -1,0 +1,21 @@
+#include <stdio.h>
+int main() {
+    int m[4][4], a[16], i, j, k = 0, t;
+
+    printf("Enter 16 elements:\n");
+    for(i=0; i<4; i++)
+        for(j=0; j<4; j++)
+            scanf("%d", &m[i][j]), a[k++] = m[i][j];
+
+    for(i=0; i<15; i++)
+        for(j=i+1; j<16; j++)
+            if(a[i] > a[j]) {
+                t = a[i];
+                a[i] = a[j];
+                a[j] = t;
+            }
+
+    printf("Sorted array:\n");
+    for(i=0; i<16; i++)
+        printf("%d ", a[i]);
+}
