@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main() {
+    char books[3][50], *p[3];
+    int i;
+
+    for(i=0; i<3; i++) {
+        printf("Book %d: ", i+1);
+        scanf(" %[^\n]", books[i]);
+        p[i] = books[i];
+    }
+
+    printf("\nBook names:\n");
+    for(i=0; i<3; i++)
+        printf("%s\n", p[i]);
+}
